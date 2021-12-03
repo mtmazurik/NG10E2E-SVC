@@ -18,11 +18,10 @@ spec:
       - name: ng10e2esvc
         image: mtmazurik/ng10e2e-svc
 ---
-apiVersion: v1
 kind: Service
+apiVersion: v1
 metadata:
   name: backend
-spec:
   type: LoadBalancer
   selector:
     lb: web
@@ -31,6 +30,8 @@ spec:
     port: 80
   - name: https
     port: 443
-    targetPort: 49159
+    targetPort: 443
+
+
 
     
