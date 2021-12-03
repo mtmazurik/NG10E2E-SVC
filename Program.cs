@@ -15,20 +15,12 @@ builder.Services.AddSwaggerGen( /* c =>
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-//if (app.Environment.IsDevelopment())    mtm; to get swagger in a container (Why?   Dockerfile build is : Release build
-//{
-    app.UseSwagger();
-    app.UseSwaggerUI(/* c =>
-    {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "ng10e2e-svc api");
-    }*/);
-//}
 
-/*app.UseCors(x => x
-            .AllowAnyOrigin()
-            .AllowAnyMethod()
-            .AllowAnyHeader());*/
+//if (app.Environment.IsDevelopment())    2021-12-03 mtm; comment out: guarantees swagger endpoint in Release build at http://localhost/swagger/index.html (if using Docker Desktop kubernetes)
+//{
+app.UseSwagger();
+app.UseSwaggerUI();
+//}
 
 app.UseHttpsRedirection();
 
