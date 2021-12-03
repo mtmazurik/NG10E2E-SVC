@@ -8,7 +8,7 @@ EXPOSE 443
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY ["ng10e2e-svc.csproj", "."]
-RUN dotnet restore "./ng10e1e-svc.csproj"
+RUN dotnet restore "./ng10e2e-svc.csproj"
 COPY . .
 WORKDIR "/src/."
 RUN dotnet build "ng10e2e-svc.csproj" -c Release -o /app/build
