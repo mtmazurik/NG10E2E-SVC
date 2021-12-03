@@ -4,7 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <RootNamespace>NG10E2E_SVC</RootNamespace>
+    <RootNamespace>ng10e2e-svc</RootNamespace>
     <UserSecretsId>997da4ef-459c-4a16-a10c-040b4a4fc30a</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>.</DockerfileContext>

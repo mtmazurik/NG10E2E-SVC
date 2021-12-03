@@ -9,7 +9,7 @@
     }
   },
   "profiles": {
-    "NG10E2E_SVC": {
+    "ng10e2e-svc": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",

@@ -2,13 +2,13 @@
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace NG10E2E_SVC.Controllers
+namespace ng10e2e-svc.Controllers
 {
-    [Route("[controller]")]
+    [Route("[controller]")] //   /admin
     [ApiController]
     public class AdminController : ControllerBase
     {
-        // GET: api/<AdminController>
+        // GET:  /ping
         [HttpGet("ping")]
         public IActionResult Get()
         {
