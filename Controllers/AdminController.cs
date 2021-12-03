@@ -12,7 +12,7 @@ namespace NG10E2E_SVC.Controllers
         [HttpGet("ping")]
         public IActionResult Get()
         {
-            return Ok("200 OK");
+            return Ok("200 OK Ping");
         }
     }
 }
