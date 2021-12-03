@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      lb: web
+  template:
+    metadata:
+      labels:
+        lb: web
+        app: ng10e2esvc
+    spec:
+      containers: 
+      - name: ng10e2esvc
+        image: mtmazurik/ng10e2e-svc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend
+spec:
+  type: LoadBalancer
+  selector:
+    lb: web
+  ports:
+  - port: 80
+
+
+    
