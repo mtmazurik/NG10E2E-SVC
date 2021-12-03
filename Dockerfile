@@ -7,16 +7,16 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["NG10E2E-SVC.csproj", "."]
-RUN dotnet restore "./NG10E2E-SVC.csproj"
+COPY ["ng10e1e-svc.csproj", "."]
+RUN dotnet restore "./ng10e1e-svc.csproj"
 COPY . .
 WORKDIR "/src/."
-RUN dotnet build "NG10E2E-SVC.csproj" -c Release -o /app/build
+RUN dotnet build "ng10e1e-svc.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "NG10E2E-SVC.csproj" -c Release -o /app/publish
+RUN dotnet publish "ng10e1e-svc.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "NG10E2E-SVC.dll"]
+ENTRYPOINT ["dotnet", "ng10e1e-svc.dll"]
